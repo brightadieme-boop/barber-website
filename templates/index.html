@@ -1,30 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jhonny's Barber Shop</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLADEHAUS — Premium Barber Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <header>
-    <h1>Jhonny's Barber Shop 💈</h1>
+
+    <!-- Custom cursor -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- NAV -->
     <nav>
-      <a href="/">Home</a>
-      <a href="/booking">Book Appointment</a>
+        <div class="nav-logo">BLADE<span>HAUS</span></div>
+        <ul class="nav-links">
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/booking">Book Now</a></li>
+        </ul>
+        <a href="/booking" class="nav-cta">BOOK A CUT</a>
     </nav>
-  </header>
 
-  <main>
+    <!-- HERO -->
     <section class="hero">
-      <h2>Look Sharp, Feel Confident</h2>
-      <p>Professional cuts and grooming for modern gentlemen.</p>
-      <a href="/booking" class="btn">Book Now</a>
+        <div class="hero-bg-text">BLADE</div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">✦ Est. London · Premium Cuts</p>
+            <h1 class="hero-title">
+                THE ART<br>
+                <em>OF THE</em><br>
+                PERFECT CUT.
+            </h1>
+            <p class="hero-desc">Precision fades. Sharp lines. Zero compromise. Walk in looking good. Walk out looking elite.</p>
+            <div class="hero-actions">
+                <a href="/booking" class="btn btn-primary">Book Your Appointment</a>
+                <a href="#services" class="btn btn-outline">Our Services</a>
+            </div>
+        </div>
+        <div class="hero-side">
+            <div class="hero-badge">
+                <div class="badge-inner">
+                    <span class="badge-num">500+</span>
+                    <span class="badge-label">Happy Clients</span>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">8+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">5★</span>
+                    <span class="stat-label">Google Rating</span>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>© 2025 Jhonny's Barber Shop</p>
-  </footer>
+    <!-- MARQUEE STRIP -->
+    <div class="marquee-strip">
+        <div class="marquee-inner">
+            <span>HAIRCUT ✦</span>
+            <span>BEARD TRIM ✦</span>
+            <span>FULL GROOM ✦</span>
+            <span>FADE ✦</span>
+            <span>LINE UP ✦</span>
+            <span>HOT TOWEL ✦</span>
+            <span>HAIRCUT ✦</span>
+            <span>BEARD TRIM ✦</span>
+            <span>FULL GROOM ✦</span>
+            <span>FADE ✦</span>
+            <span>LINE UP ✦</span>
+            <span>HOT TOWEL ✦</span>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">✦ What We Do</p>
+                <h2 class="section-title">OUR SERVICES</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">✂️</div>
+                    <div class="service-body">
+                        <h3 class="service-name">Haircut</h3>
+                        <p class="service-desc">Classic or modern cuts tailored to your face shape and style. Every cut finished with precision.</p>
+                        <div class="service-footer">
+                            <span class="service-price">From £25</span>
+                            <span class="service-time">45 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card featured">
+                    <div class="service-badge">Most Popular</div>
+                    <div class="service-icon">🪒</div>
+                    <div class="service-body">
+                        <h3 class="service-name">Full Groom</h3>
+                        <p class="service-desc">Complete haircut, beard trim and hot towel finish. The full treatment for the man who means business.</p>
+                        <div class="service-footer">
+                            <span class="service-price">From £45</span>
+                            <span class="service-time">75 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧔</div>
+                    <div class="service-body">
+                        <h3 class="service-name">Beard Trim</h3>
+                        <p class="service-desc">Shape, define and clean up your beard. Hot towel and balm finish included.</p>
+                        <div class="service-footer">
+                            <span class="service-price">From £15</span>
+                            <span class="service-time">30 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="services-cta">
+                <a href="/booking" class="btn btn-primary">Book Any Service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why-section">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-text">
+                    <p class="section-label">✦ Why BLADEHAUS</p>
+                    <h2 class="section-title">MORE THAN<br><em>JUST A HAIRCUT.</em></h2>
+                    <p class="why-desc">We don't just cut hair. We build confidence. Every client leaves sharper than they arrived — that's the BLADEHAUS standard.</p>
+                    <div class="why-list">
+                        <div class="why-item">
+                            <span class="why-dot"></span>
+                            Walk-ins welcome, appointments prioritised
+                        </div>
+                        <div class="why-item">
+                            <span class="why-dot"></span>
+                            Master barbers with 5+ years experience each
+                        </div>
+                        <div class="why-item">
+                            <span class="why-dot"></span>
+                            Premium products — Fades by Schwarzkopf, Wahl & more
+                        </div>
+                        <div class="why-item">
+                            <span class="why-dot"></span>
+                            Confirmation & reminder emails sent automatically
+                        </div>
+                    </div>
+                    <a href="/booking" class="btn btn-primary" style="margin-top:32px">Book Now →</a>
+                </div>
+                <div class="why-visual">
+                    <div class="why-card-big">
+                        <span style="font-size:80px">✂️</span>
+                        <p>Precision Every Time</p>
+                    </div>
+                    <div class="why-card-small">
+                        <span style="font-size:40px">🪒</span>
+                        <p>Hot Towel Finish</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">✦ The Work</p>
+                <h2 class="section-title">FRESH CUTS ONLY</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item g1">✂️</div>
+                <div class="gallery-item g2">💈</div>
+                <div class="gallery-item g3">🪒</div>
+                <div class="gallery-item g4">🧔</div>
+                <div class="gallery-item g5">👑</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="cta-strip">
+        <div class="container">
+            <div class="cta-inner">
+                <div>
+                    <h2 class="cta-title">READY TO LOOK<br><em>YOUR BEST?</em></h2>
+                    <p class="cta-sub">Book online in 60 seconds. Confirmation email sent instantly.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="/booking" class="btn btn-gold">Book Appointment</a>
+                    <a href="https://wa.me/447700000000" class="btn btn-whatsapp">📱 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">BLADE<span>HAUS</span></div>
+                <div class="footer-info">
+                    <p>📍 London, UK</p>
+                    <p>⏰ Mon–Sat: 9am–7pm | Sun: 10am–4pm</p>
+                    <p>📱 <a href="https://wa.me/447700000000">WhatsApp Us</a></p>
+                </div>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/booking">Book Now</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 BLADEHAUS · All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Custom cursor
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Fade in on scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.service-card, .why-item, .gallery-item').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
